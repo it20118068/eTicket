@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Exploratio Greatness Demo";
+    src: url(../fonts/ExploratioGreatnessDemo.ttf) format('truetype');
+}
+
+.side-nav {
+    background-color: #510063;
+}
+
+.main-nav-link {
+    color: white;
+    font-size: 1.1vw;
+    font-weight: 400;
+    border-color: aliceblue;
+    background-color:#33003F;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
+.main-nav-link:hover {
+    background-color: #673AB7;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.main-nav-link:focus {
+    background-color: #673AB7;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.main-nav-link:active {
+    background-color: #673AB7;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.active{
+    background-color: #673AB7;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.title-box {
+    color: white;
+}
+
+.nav-title{
+    font-family: "Exploratio Greatness Demo";
+    font-size: 3.5rem;
+}

@@ -1,0 +1,31 @@
+.login-bg {
+    background-image: url('../assets/login-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+}
+
+.login-bg h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.login-card {
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 40vw;
+    padding: 6%;
+    border-radius: 30px;
+}
+
+.login-card label {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.login-card button {
+    width: 50%;
+    border-radius: 30px;
+    margin-top: 2%;
+}
