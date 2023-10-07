@@ -27,7 +27,7 @@ namespace Authentication_System.DataAccessLayer
 
             try
             { 
-                var res = await _booksCollection.Find(x => x.UserName == request.UserName).ToListAsync();
+                var res = await _booksCollection.Find(x => x.NIC == request.NIC).ToListAsync();
 
                 if (res.Count == 0)
                 {
@@ -59,24 +59,36 @@ namespace Authentication_System.DataAccessLayer
             try
             {
                 response.data = new List<RegisterUserRequest>();
-                response.data =  await _booksCollection.Find(x => x.UserName == Username && x.Password == Password).ToListAsync();
 
-                if (response.data == null || response.data.Count == 0)
+                response.data = await _booksCollection.Find(x => x.UserName == Username).ToListAsync();
+
+                //var res1 = response.data[0].IsActive;
+
+                if (response.data[0].IsActive == true)
+                {
+                    response.data = await _booksCollection.Find(x => x.UserName == Username && x.Password == Password).ToListAsync();
+
+                    if (response.data == null || response.data.Count == 0)
+                    {
+                        response.IsSuccess = true;
+                        response.Message = "Username or password Incorrect";
+                        response.data = null;
+                    }
+                    else
+                    {
+                        response.IsSuccess = true;
+                        response.Message = "SuccessFull";
+
+                        response.Token = GenerateJWT(Username);
+                    }
+                }
+                else
                 {
                     response.IsSuccess = true;
-                    response.Message = "Username or password Incorrect";
-
+                    response.Message = "User InActive";
+                    response.data = null;
                 }
-                else 
-                {
-                    response.IsSuccess = true;
-                    response.Message = "SuccessFull";
-
-                    response.Token = GenerateJWT(Username);
-                }
-                
-
-
+  
             }
             catch (Exception ex)
             {

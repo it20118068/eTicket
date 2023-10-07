@@ -1,4 +1,4 @@
-﻿using E_TicketingBackend.DataAccessLayer;
+﻿using Authentication_System.Model;
 using E_TicketingBackend.DataAccessLayer.IDataAccessLayer;
 using E_TicketingBackend.Model;
 using Microsoft.AspNetCore.Authorization;
@@ -10,38 +10,21 @@ namespace CrudOperations.Controllers
     [ApiController]
     [Authorize(AuthenticationSchemes = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
 
-    public class UserController : ControllerBase
+    public class TrainController : ControllerBase
     {
-        private readonly IUserDAL _userDAL;
-        public UserController(IUserDAL userDAL)
+        private readonly ITrainDAL _trainDAL;
+        public TrainController(ITrainDAL trainDAL)
         {
-            _userDAL = userDAL;
+            _trainDAL = trainDAL;
         }
 
         [HttpPost]
-        public async Task<IActionResult> getAccountById([FromQuery] string nic)
+        public async Task<IActionResult> addTrain(TrainRequestDTO request)
         {
-            UserResponseDTO response = new UserResponseDTO();
+            TrainResponseDTO response = new TrainResponseDTO();
             try
             {
-                response = await _userDAL.getAccountById(nic);
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.Message = ex.Message;
-            }
-
-            return Ok(response);
-        }
-
-        [HttpDelete]
-        public async Task<IActionResult> deletAccountById([FromQuery] string nic)
-        {
-            UserResponseDTO response = new UserResponseDTO();
-            try
-            {
-                response = await _userDAL.deletAccountById(nic);
+                response = await _trainDAL.addTrain(request);
             }
             catch (Exception ex)
             {
@@ -53,12 +36,12 @@ namespace CrudOperations.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> updateAccountById(UserRequestDTO request)
+        public async Task<IActionResult> addSchedule(ScheduleRequestDTO request)
         {
-            UserResponseDTO response = new UserResponseDTO();
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
             try
             {
-                response = await _userDAL.updateAccountById(request);
+                response = await _trainDAL.addSchedule(request);
             }
             catch (Exception ex)
             {
@@ -70,12 +53,30 @@ namespace CrudOperations.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllUsers()
+        public async Task<IActionResult> GetAllSchedule()
         {
-            UserResponseDTO response = new UserResponseDTO();
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
             try
             {
-                response = await _userDAL.GetAllUsers();
+                response = await _trainDAL.GetAllSchedule();
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return Ok(response);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> updateScheduleById(ScheduleRequestDTO request)
+        {
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
+            try
+            {
+                response = await _trainDAL.updateScheduleById(request);
             }
             catch (Exception ex)
             {
