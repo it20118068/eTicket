@@ -51,7 +51,7 @@ namespace Authentication_System.DataAccessLayer
 
         }
 
-        public async Task<UserLoginResponse> UserLogin(string Username,string Password)
+        public async Task<UserLoginResponse> UserLogin(UserLoginRequest request)
         {
             UserLoginResponse response = new UserLoginResponse();
             
@@ -60,13 +60,13 @@ namespace Authentication_System.DataAccessLayer
             {
                 response.data = new List<RegisterUserRequest>();
 
-                response.data = await _booksCollection.Find(x => x.UserName == Username).ToListAsync();
+                response.data = await _booksCollection.Find(x => x.UserName == request.UserName).ToListAsync();
 
                 //var res1 = response.data[0].IsActive;
 
                 if (response.data[0].IsActive == true)
                 {
-                    response.data = await _booksCollection.Find(x => x.UserName == Username && x.Password == Password).ToListAsync();
+                    response.data = await _booksCollection.Find(x => x.UserName == request.UserName && x.Password == request.Password).ToListAsync();
 
                     if (response.data == null || response.data.Count == 0)
                     {
@@ -79,7 +79,7 @@ namespace Authentication_System.DataAccessLayer
                         response.IsSuccess = true;
                         response.Message = "SuccessFull";
 
-                        response.Token = GenerateJWT(Username);
+                        response.Token = GenerateJWT(request.UserName);
                     }
                 }
                 else

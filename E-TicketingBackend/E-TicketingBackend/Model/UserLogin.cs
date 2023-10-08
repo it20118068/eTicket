@@ -10,9 +10,9 @@ namespace Authentication_System.Model
 {
     public class UserLoginRequest
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string _id { get; set; }
+        //[BsonId]
+        //[BsonRepresentation(BsonType.ObjectId)]
+        //public string _id { get; set; }
 
         [Required(ErrorMessage ="UserName Is Mandetory")]
         public string UserName { get; set;  }

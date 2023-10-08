@@ -9,6 +9,6 @@ namespace Authentication_System.DataAccessLayer
     public interface IAuthenticationDataAccess
     {
         public Task<RegisterUserResponse> RegisterUser(RegisterUserRequest request);
-        public Task<UserLoginResponse> UserLogin(string Username, string Password);
+        public Task<UserLoginResponse> UserLogin(UserLoginRequest request);
     }
 }
