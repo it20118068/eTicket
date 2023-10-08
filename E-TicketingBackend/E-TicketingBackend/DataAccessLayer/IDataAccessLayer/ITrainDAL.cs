@@ -1,5 +1,4 @@
-﻿using Authentication_System.Model;
-using E_TicketingBackend.Model;
+﻿using E_TicketingBackend.Model;
 
 namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
 {
@@ -9,6 +8,8 @@ namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
         public Task<ScheduleResponseDTO> addSchedule(ScheduleRequestDTO request);
         public Task<ScheduleResponseDTO> GetAllSchedule();
         public  Task<ScheduleResponseDTO> updateScheduleById(ScheduleRequestDTO request);
-        
+        public  Task<ScheduleResponseDTO> getSheduleById(string _id);
+        public Task<ScheduleResponseDTO> cancelTrainReservation(ScheduleRequestDTO request);
+
     }
 }

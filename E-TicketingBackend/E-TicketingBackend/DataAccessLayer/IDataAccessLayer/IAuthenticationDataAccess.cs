@@ -10,7 +10,5 @@ namespace Authentication_System.DataAccessLayer
     {
         public Task<RegisterUserResponse> RegisterUser(RegisterUserRequest request);
         public Task<UserLoginResponse> UserLogin(string Username, string Password);
-        //public Task<AddInformationResponse> AddInformation(AddInformationRequest request);
-        //public Task<GetInformationResponse> GetInformation();
     }
 }

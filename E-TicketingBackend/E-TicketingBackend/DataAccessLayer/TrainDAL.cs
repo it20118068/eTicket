@@ -124,5 +124,59 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
+        public async Task<ScheduleResponseDTO> getSheduleById(string _id)
+        {
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
+
+            try
+            {
+                response.data = new List<ScheduleRequestDTO>();
+                response.data = await _trainCollection.Find(x => x._id == _id).ToListAsync();
+
+                response.IsSuccess = true;
+                response.Message = "Successfull";
+
+
+                if (response.data == null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "No Record found";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+        }
+
+        public async Task<ScheduleResponseDTO> cancelTrainReservation(ScheduleRequestDTO request)
+        {
+
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
+
+            try
+            {
+                var Result = await _trainCollection.ReplaceOneAsync(x => x._id == request._id, request);
+
+                var res1 = await _trainCollection.Find(x => x._id == request._id).ToListAsync();
+
+                response.data = res1;
+                response.IsSuccess = true;
+                response.Message = "Successfull update schedule";
+
+
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+
+        }
     }
 }

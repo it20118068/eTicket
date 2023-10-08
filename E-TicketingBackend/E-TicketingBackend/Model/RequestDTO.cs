@@ -49,7 +49,6 @@ namespace E_TicketingBackend.Model
         public string startingTime { get; set; }
         public string arrivalTime { get; set; }
         public List<TrainCreateDTO> train { get; set; }
-        //public string train { get; set; }
         public string startPoint { get; set; }
         public string endPoint { get; set; }
         public string ticketPrice { get; set; }
@@ -65,7 +64,19 @@ namespace E_TicketingBackend.Model
     }
 
 
-
-
+    public class TicketRequestDTO
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; set; }
+        public string userId { get; set; }
+        public string bookingDate { get; set; }
+        public string reservationDate { get; set; }
+        public string noOfReservations { get; set; }
+        public string schedule { get; set; }
+        public string totAmount { get; set; }
+        //public string status { get; set; }
+        public enum status { Active,Inactive}
+    }
 
 }

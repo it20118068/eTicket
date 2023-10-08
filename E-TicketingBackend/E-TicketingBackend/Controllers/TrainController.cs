@@ -1,5 +1,4 @@
-﻿using Authentication_System.Model;
-using E_TicketingBackend.DataAccessLayer.IDataAccessLayer;
+﻿using E_TicketingBackend.DataAccessLayer.IDataAccessLayer;
 using E_TicketingBackend.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -77,6 +76,41 @@ namespace CrudOperations.Controllers
             try
             {
                 response = await _trainDAL.updateScheduleById(request);
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> getSheduleById([FromQuery] string _id)
+        {
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
+            try
+            {
+                response = await _trainDAL.getSheduleById(_id);
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return Ok(response);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> cancelTrainReservation(ScheduleRequestDTO request)
+        {
+            ScheduleResponseDTO response = new ScheduleResponseDTO();
+            try
+            {
+                response = await _trainDAL.cancelTrainReservation(request);
             }
             catch (Exception ex)
             {

@@ -58,38 +58,5 @@ namespace Authentication_System.Controllers
             return Ok(response);
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> AddInformation(AddInformationRequest request)
-        //{
-        //    AddInformationResponse response = new AddInformationResponse();
-        //    try
-        //    {
-        //        response = await _authenticationDataAccess.AddInformation(request);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        response.IsSuccess = false;
-        //        response.Message = ex.Message;
-        //    }
-
-        //    return Ok(response);
-        //}
-
-        //[HttpGet]
-        //public async Task<IActionResult> GetInformation()
-        //{
-        //    GetInformationResponse response = new GetInformationResponse();
-        //    try
-        //    {
-        //        response = await _authenticationDataAccess.GetInformation();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        response.IsSuccess = false;
-        //        response.Message = ex.Message;
-        //    }
-
-        //    return Ok(response);
-        //}
     }
 }

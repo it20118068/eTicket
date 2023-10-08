@@ -33,6 +33,7 @@ namespace Eticketing
             services.AddScoped<IUserDAL, UserDAL>();
             services.AddScoped<IAuthenticationDataAccess, AuthenticationDataAccess>();
             services.AddScoped<ITrainDAL, TrainDAL>();
+            services.AddScoped<ITicketDAL, TicketDAL>();
 
             //----------------------------------------------------------------
             #region Swagger

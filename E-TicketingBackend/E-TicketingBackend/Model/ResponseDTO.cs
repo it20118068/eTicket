@@ -23,4 +23,11 @@
         public List<ScheduleRequestDTO> data { get; set; }
     }
 
+    public class TicketResponseDTO
+    {
+        public bool IsSuccess { get; set; }
+        public string Message { get; set; }
+        public List<TicketRequestDTO> ticketData { get; set; }
+    }
+
 }
