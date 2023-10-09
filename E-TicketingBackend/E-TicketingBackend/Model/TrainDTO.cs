@@ -4,6 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace E_TicketingBackend.Model
 
 {
+    //Train DTO class
     public class TrainDTO
     {
         [BsonId]

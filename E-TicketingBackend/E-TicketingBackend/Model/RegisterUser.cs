@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Authentication_System.Model
 {
+    //User registration Request DTO class
     public class RegisterUserRequest
     {
         [BsonId]

@@ -1,32 +1,26 @@
-﻿//namespace E_TicketingBackend.DataAccessLayer
-//{
-//    public class TicketDAL
-//    {
-//    }
-//}
-using E_TicketingBackend.DataAccessLayer.IDataAccessLayer;
+﻿using E_TicketingBackend.DataAccessLayer.IDataAccessLayer;
 using E_TicketingBackend.Model;
 using MongoDB.Driver;
 
+//This is a Ticket Data Access Layer
 namespace E_TicketingBackend.DataAccessLayer
 {
     public class TicketDAL : ITicketDAL
     {
         private readonly IConfiguration _configuration;
         private readonly MongoClient _mongoConnection;
-        //private readonly IMongoCollection<TrainRequestDTO> _booksCollection;
         private readonly IMongoCollection<TicketDTO> _ticketCollection;
+
+        //This method use to create a DB Connection
         public TicketDAL(IConfiguration configuration)
         {
             _configuration = configuration;
             _mongoConnection = new MongoClient(_configuration["BookStoreDatabase:ConnectionString"]);
             var MongoDataBase = _mongoConnection.GetDatabase(_configuration["BookStoreDatabase:DatabaseName"]);
-            //_booksCollection = MongoDataBase.GetCollection<TrainRequestDTO>(_configuration["BookStoreDatabase:TrainCollectionName"]);
             _ticketCollection = MongoDataBase.GetCollection<TicketDTO>(_configuration["BookStoreDatabase:ticketCollaction"]);
-
         }
 
-
+        //This method use to add new reservation for train
         public async Task<ResponseDTO> addReservation(RequestDTO request)
         {
             ResponseDTO response = new ResponseDTO();
@@ -55,6 +49,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to get all reservations 
         public async Task<ResponseDTO> getAllReservation()
         {
             ResponseDTO response = new ResponseDTO();
@@ -79,6 +74,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to update reservation by id 
         public async Task<ResponseDTO> updateReservationById(RequestDTO request)
         {
 
@@ -106,6 +102,7 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
+        //This method use to get reservation by id 
         public async Task<ResponseDTO> getReservationById(string _id)
         {
             ResponseDTO response = new ResponseDTO();
@@ -134,34 +131,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
-        public async Task<ResponseDTO> updateReservationByUserId(string nic)
-        {
-            ResponseDTO response = new ResponseDTO();
-
-            try
-            {
-                response.ticketDTOs = new List<TicketDTO>();
-                response.ticketDTOs = await _ticketCollection.Find(x => x._id == nic).ToListAsync();
-
-                response.IsSuccess = true;
-                response.Message = "Successfull";
-
-
-                if (response.ticketDTOs == null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "No Record found";
-                }
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.Message = "Exception Occurs : " + ex.Message;
-            }
-
-            return response;
-        }
-
+        //This method use to get get reservation by NIC 
         public async Task<ResponseDTO> getReservationByNic(string nic)
         {
             ResponseDTO response = new ResponseDTO();
@@ -189,6 +159,5 @@ namespace E_TicketingBackend.DataAccessLayer
 
             return response;
         }
-
     }
 }

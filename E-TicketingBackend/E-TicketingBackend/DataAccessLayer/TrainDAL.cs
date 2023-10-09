@@ -4,12 +4,15 @@ using MongoDB.Driver;
 
 namespace E_TicketingBackend.DataAccessLayer
 {
+    //Train Data Access Layer 
     public class TrainDAL : ITrainDAL
     {
         private readonly IConfiguration _configuration;
         private readonly MongoClient _mongoConnection;
         private readonly IMongoCollection<TrainDTO> _trainCollection;
         private readonly IMongoCollection<ScheduleDTO> _trainScheduleCollection;
+        
+        //This method use to create a DB Connection
         public TrainDAL(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -20,7 +23,7 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
-
+        //This method use to add a new Train 
         public async Task<ResponseDTO> addTrain(RequestDTO request)
         {
             ResponseDTO response = new ResponseDTO();
@@ -49,6 +52,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to Get all Trains
         public async Task<ResponseDTO> GetAllTrain()
         {
             ResponseDTO response = new ResponseDTO();
@@ -73,6 +77,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to Add new train schedule
         public async Task<ResponseDTO> addSchedule(RequestDTO request)
         {
 
@@ -80,8 +85,6 @@ namespace E_TicketingBackend.DataAccessLayer
 
             try
             {
-                //var res = await _booksCollection.Find(x => x.id == request.).ToListAsync();
-
                     var res = _trainScheduleCollection.InsertOneAsync(request.scheduleDTO);
                     response.IsSuccess = true;
                     response.Message = "Successfull create schedule";
@@ -97,6 +100,7 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
+        //This method use to get all train schedule
         public async Task<ResponseDTO> GetAllSchedule()
         {
             ResponseDTO response = new ResponseDTO();
@@ -121,6 +125,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to update train schedule by ID 
         public async Task<ResponseDTO> updateScheduleById(RequestDTO request)
         {
 
@@ -148,6 +153,7 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
+        //This method use to get train schedule by ID
         public async Task<ResponseDTO> getSheduleById(string _id)
         {
             ResponseDTO response = new ResponseDTO();
@@ -176,6 +182,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to cancel Train reservation schedule
         public async Task<ResponseDTO> cancelTrainReservation(RequestDTO request)
         {
 
@@ -203,6 +210,7 @@ namespace E_TicketingBackend.DataAccessLayer
 
         }
 
+        //This method use to get a schedule by train code
         public async Task<ResponseDTO> getSheduleByTrainId(string TrainCode)
         {
             ResponseDTO response = new ResponseDTO();
@@ -230,7 +238,6 @@ namespace E_TicketingBackend.DataAccessLayer
 
             return response;
         }
-
 
     }
 }

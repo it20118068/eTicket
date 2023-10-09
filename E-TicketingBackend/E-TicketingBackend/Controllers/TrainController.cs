@@ -3,6 +3,7 @@ using E_TicketingBackend.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+//TrainDTO Controller
 namespace CrudOperations.Controllers
 {
     [Route("api/[controller]/[Action]")]
@@ -17,6 +18,7 @@ namespace CrudOperations.Controllers
             _trainDAL = trainDAL;
         }
 
+        //This method use to add a new Train 
         [HttpPost]
         public async Task<IActionResult> addTrain(RequestDTO request)
         {
@@ -34,6 +36,7 @@ namespace CrudOperations.Controllers
             return Ok(response);
         }
 
+        //This method use to Get all Trains
         [HttpGet]
         public async Task<IActionResult> GetAllTrain()
         {
@@ -52,6 +55,7 @@ namespace CrudOperations.Controllers
 
         }
 
+        //This method use to Add new train schedule
         [HttpPost]
         public async Task<IActionResult> addSchedule(RequestDTO request)
         {
@@ -69,6 +73,7 @@ namespace CrudOperations.Controllers
             return Ok(response);
         }
 
+        //This method use to get all train schedule
         [HttpGet]
         public async Task<IActionResult> GetAllSchedule()
         {
@@ -87,6 +92,7 @@ namespace CrudOperations.Controllers
 
         }
 
+        //This method use to update train schedule by ID 
         [HttpPost]
         public async Task<IActionResult> updateScheduleById(RequestDTO request)
         {
@@ -104,6 +110,7 @@ namespace CrudOperations.Controllers
             return Ok(response);
         }
 
+        //This method use to get train schedule by ID
         [HttpPost]
         public async Task<IActionResult> getSheduleById([FromQuery] string _id)
         {
@@ -122,6 +129,7 @@ namespace CrudOperations.Controllers
 
         }
 
+        //This method use to cancel Train reservation schedule
         [HttpPost]
         public async Task<IActionResult> cancelTrainReservation(RequestDTO request)
         {
@@ -139,6 +147,7 @@ namespace CrudOperations.Controllers
             return Ok(response);
         }
 
+        //This method use to get a schedule by train code
         [HttpPost]
         public async Task<IActionResult> getSheduleByTrainId([FromQuery] string TrainCode)
         {
@@ -156,8 +165,6 @@ namespace CrudOperations.Controllers
             return Ok(response);
 
         }
-
-
 
     }
 }

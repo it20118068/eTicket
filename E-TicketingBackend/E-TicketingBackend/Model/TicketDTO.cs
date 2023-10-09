@@ -1,8 +1,10 @@
 ﻿using E_TicketingBackend.enums;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+
 namespace E_TicketingBackend.Model
 {
+    //Ticket DTO class
     public class TicketDTO
     {
         [BsonId]
@@ -14,7 +16,6 @@ namespace E_TicketingBackend.Model
         public int noOfReservations { get; set; }
         public ScheduleDTO schedule { get; set; }
         public long totAmount { get; set; }
-        //public string status { get; set; }
         public int status { get; set; }
     }
 }

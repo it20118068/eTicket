@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Authentication_System.Model
 {
+    //User Login request and response Class
     public class UserLoginRequest
     {
         //[BsonId]

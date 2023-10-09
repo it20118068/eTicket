@@ -3,6 +3,7 @@ using E_TicketingBackend.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+//Ticket Controller
 namespace E_TicketingBackend.Controllers
 {
     [Route("api/[controller]/[Action]")]
@@ -17,6 +18,7 @@ namespace E_TicketingBackend.Controllers
             _ticketDAL = ticketDAL;
         }
 
+        //This method use to add new reservation for train
         [HttpPost]
         public async Task<IActionResult> addReservation(RequestDTO request)
         {
@@ -34,6 +36,7 @@ namespace E_TicketingBackend.Controllers
             return Ok(response);
         }
 
+        //This method use to get all reservations 
         [HttpGet]
         public async Task<IActionResult> getAllReservation()
         {
@@ -52,6 +55,7 @@ namespace E_TicketingBackend.Controllers
 
         }
 
+        //This method use to update reservation by id 
         [HttpPost]
         public async Task<IActionResult> updateReservationById(RequestDTO request)
         {
@@ -69,6 +73,7 @@ namespace E_TicketingBackend.Controllers
             return Ok(response);
         }
 
+        //This method use to get reservation by id 
         [HttpPost]
         public async Task<IActionResult> getReservationById([FromQuery] string _id)
         {
@@ -86,6 +91,7 @@ namespace E_TicketingBackend.Controllers
             return Ok(response);
         }
 
+        //This method use to get get reservation by NIC 
         [HttpPost]
         public async Task<IActionResult> getReservationByNic([FromQuery] string nic)
         {
@@ -102,7 +108,5 @@ namespace E_TicketingBackend.Controllers
 
             return Ok(response);
         }
-
-
     }
 }

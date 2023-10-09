@@ -4,11 +4,14 @@ using MongoDB.Driver;
 
 namespace E_TicketingBackend.DataAccessLayer
 {
+    //User manegement Data Access Layer
     public class UserDAL : IUserDAL
     {
         private readonly IConfiguration _configuration;
         private readonly MongoClient _mongoConnection;
         private readonly IMongoCollection<UserDTO> _booksCollection;
+
+        //This method use to create a DB Connection
         public UserDAL(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -16,7 +19,7 @@ namespace E_TicketingBackend.DataAccessLayer
             var MongoDataBase = _mongoConnection.GetDatabase(_configuration["BookStoreDatabase:DatabaseName"]);
             _booksCollection = MongoDataBase.GetCollection<UserDTO>(_configuration["BookStoreDatabase:BooksCollectionName"]);
         }
-
+        //This method use to get user account by NIC 
         public async Task<ResponseDTO> getAccountById(string nic)
         {
             ResponseDTO response = new ResponseDTO();
@@ -45,15 +48,13 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to Delete a user account by NIC
         public async Task<ResponseDTO> deletAccountById(string nic)
         {
             ResponseDTO response = new ResponseDTO();
 
             try
             {
-                //response.userDTOs = new List<UserDTO>();
-                //response.userDTOs = await _booksCollection.Find(x => x.NIC == nic).ToListAsync();
-
                 var result = await _booksCollection.DeleteOneAsync(x => x.NIC == nic);
 
                 response.IsSuccess = true;
@@ -70,6 +71,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to Update user account by nic
         public async Task<ResponseDTO> updateAccountById(RequestDTO request)
         {
             ResponseDTO response = new ResponseDTO();
@@ -84,14 +86,12 @@ namespace E_TicketingBackend.DataAccessLayer
                     response.Message = "No user";
                 }
                 else
-                {
-                    //request.userDto._id = res[0]._id;
+                {;
 
                     var Result = await _booksCollection.ReplaceOneAsync(x => x._id == res[0]._id, request.userDto);
 
                     var res1 = await _booksCollection.Find(x => x.NIC == request.userDto.NIC).ToListAsync();
 
-                    //response.userDTOs = res1;
                     response.IsSuccess = true;
                     response.Message = "Successfull updated";
                 }
@@ -105,6 +105,7 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        //This method use to get all user accounts
         public async Task<ResponseDTO> GetAllUsers()
         {
             ResponseDTO response = new ResponseDTO();
@@ -130,8 +131,6 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
 
         }
-
-
     }
 }
 

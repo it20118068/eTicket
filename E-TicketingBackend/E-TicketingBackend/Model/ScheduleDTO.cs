@@ -3,6 +3,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 namespace E_TicketingBackend.Model
 {
+    //Train Schedule DTO class
     public class ScheduleDTO
     {
         [BsonId]

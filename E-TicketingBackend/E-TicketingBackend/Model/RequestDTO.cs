@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace E_TicketingBackend.Model
 {
+    //All request DTO class
     public class RequestDTO
     {
         public UserDTO? userDto { get; set; }

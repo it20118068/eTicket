@@ -1,11 +1,6 @@
-﻿//namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
-//{
-//    public interface ITicketDAL
-//    {
-//    }
-//}
-using E_TicketingBackend.Model;
+﻿using E_TicketingBackend.Model;
 
+//This is a ticket interface
 namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
 {
     public interface ITicketDAL
@@ -15,9 +10,6 @@ namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
         public Task<ResponseDTO> updateReservationById(RequestDTO request);
         public Task<ResponseDTO> getReservationById(string _id);
         public Task<ResponseDTO> getReservationByNic(string nic);
-
-
-
     }
 }
 
