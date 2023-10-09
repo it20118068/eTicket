@@ -134,5 +134,61 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        public async Task<ResponseDTO> updateReservationByUserId(string nic)
+        {
+            ResponseDTO response = new ResponseDTO();
+
+            try
+            {
+                response.ticketDTOs = new List<TicketDTO>();
+                response.ticketDTOs = await _ticketCollection.Find(x => x._id == nic).ToListAsync();
+
+                response.IsSuccess = true;
+                response.Message = "Successfull";
+
+
+                if (response.ticketDTOs == null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "No Record found";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+        }
+
+        public async Task<ResponseDTO> getReservationByNic(string nic)
+        {
+            ResponseDTO response = new ResponseDTO();
+
+            try
+            {
+                response.ticketDTOs = new List<TicketDTO>();
+                response.ticketDTOs = await _ticketCollection.Find(x => x.nic == nic).ToListAsync();
+
+                response.IsSuccess = true;
+                response.Message = "Successfull";
+
+
+                if (response.ticketDTOs == null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "No Record found";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+        }
+
     }
 }

@@ -10,10 +10,5 @@ namespace E_TicketingBackend.Model
         public TicketDTO? ticketDto { get; set; }
         public ScheduleDTO? scheduleDTO { get; set; }
         public TrainDTO? trainDTO { get; set; }
-
     }
-
-
-
-
 }

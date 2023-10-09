@@ -34,7 +34,6 @@ namespace E_TicketingBackend.Controllers
             return Ok(response);
         }
 
-
         [HttpGet]
         public async Task<IActionResult> getAllReservation()
         {
@@ -86,5 +85,24 @@ namespace E_TicketingBackend.Controllers
 
             return Ok(response);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> getReservationByNic([FromQuery] string nic)
+        {
+            ResponseDTO response = new ResponseDTO();
+            try
+            {
+                response = await _ticketDAL.getReservationByNic(nic);
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return Ok(response);
+        }
+
+
     }
 }

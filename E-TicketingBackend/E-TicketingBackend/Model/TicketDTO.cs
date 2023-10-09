@@ -8,7 +8,7 @@ namespace E_TicketingBackend.Model
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
-        public string userId { get; set; }
+        public string nic { get; set; }
         public string bookingDate { get; set; }
         public string reservationDate { get; set; }
         public int noOfReservations { get; set; }
