@@ -149,12 +149,12 @@ namespace CrudOperations.Controllers
 
         //This method use to get a schedule by train code
         [HttpPost]
-        public async Task<IActionResult> getSheduleByTrainId([FromQuery] string TrainCode)
+        public async Task<IActionResult> getSheduleByTrainId(RequestDTO request)
         {
             ResponseDTO response = new ResponseDTO();
             try
             {
-                response = await _trainDAL.getSheduleByTrainId(TrainCode);
+                response = await _trainDAL.getSheduleByTrainId(request.trainCode);
             }
             catch (Exception ex)
             {
@@ -165,6 +165,5 @@ namespace CrudOperations.Controllers
             return Ok(response);
 
         }
-
     }
 }
