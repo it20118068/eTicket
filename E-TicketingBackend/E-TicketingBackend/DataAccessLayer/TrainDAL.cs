@@ -8,15 +8,15 @@ namespace E_TicketingBackend.DataAccessLayer
     {
         private readonly IConfiguration _configuration;
         private readonly MongoClient _mongoConnection;
-        private readonly IMongoCollection<TrainDTO> _booksCollection;
-        private readonly IMongoCollection<ScheduleDTO> _trainCollection;
+        private readonly IMongoCollection<TrainDTO> _trainCollection;
+        private readonly IMongoCollection<ScheduleDTO> _trainScheduleCollection;
         public TrainDAL(IConfiguration configuration)
         {
             _configuration = configuration;
             _mongoConnection = new MongoClient(_configuration["BookStoreDatabase:ConnectionString"]);
             var MongoDataBase = _mongoConnection.GetDatabase(_configuration["BookStoreDatabase:DatabaseName"]);
-            _booksCollection = MongoDataBase.GetCollection<TrainDTO>(_configuration["BookStoreDatabase:TrainCollectionName"]);
-            _trainCollection = MongoDataBase.GetCollection<ScheduleDTO>(_configuration["BookStoreDatabase:trainScheduleCollaction"]);
+            _trainCollection = MongoDataBase.GetCollection<TrainDTO>(_configuration["BookStoreDatabase:TrainCollectionName"]);
+            _trainScheduleCollection = MongoDataBase.GetCollection<ScheduleDTO>(_configuration["BookStoreDatabase:trainScheduleCollaction"]);
 
         }
 
@@ -27,11 +27,11 @@ namespace E_TicketingBackend.DataAccessLayer
 
             try
             {
-                var res = await _booksCollection.Find(x => x.TrainCode == request.trainDTO.TrainCode).ToListAsync();
+                var res = await _trainCollection.Find(x => x.TrainCode == request.trainDTO.TrainCode).ToListAsync();
 
                 if (res.Count == 0)
                 {
-                    await _booksCollection.InsertOneAsync(request.trainDTO);
+                    await _trainCollection.InsertOneAsync(request.trainDTO);
                     response.IsSuccess = true;
                     response.Message = "Successfull create train";
                 }
@@ -49,6 +49,30 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
         }
 
+        public async Task<ResponseDTO> GetAllTrain()
+        {
+            ResponseDTO response = new ResponseDTO();
+            response.IsSuccess = true;
+            response.Message = "Data Fetch Successfully";
+
+            try
+            {
+                response.trainDTOs = new List<TrainDTO>();
+                response.trainDTOs = await _trainCollection.Find(x => true).ToListAsync();
+                if (response.trainDTOs.Count == 0)
+                {
+                    response.Message = "No Record Found";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+        }
+
         public async Task<ResponseDTO> addSchedule(RequestDTO request)
         {
 
@@ -58,7 +82,7 @@ namespace E_TicketingBackend.DataAccessLayer
             {
                 //var res = await _booksCollection.Find(x => x.id == request.).ToListAsync();
 
-                    var res = _trainCollection.InsertOneAsync(request.scheduleDTO);
+                    var res = _trainScheduleCollection.InsertOneAsync(request.scheduleDTO);
                     response.IsSuccess = true;
                     response.Message = "Successfull create schedule";
 
@@ -82,7 +106,7 @@ namespace E_TicketingBackend.DataAccessLayer
             try
             {
                 response.scheduleDTOs = new List<ScheduleDTO>();
-                response.scheduleDTOs = await _trainCollection.Find(x => true).ToListAsync();
+                response.scheduleDTOs = await _trainScheduleCollection.Find(x => true).ToListAsync();
                 if (response.scheduleDTOs.Count == 0)
                 {
                     response.Message = "No Record Found";
@@ -104,9 +128,9 @@ namespace E_TicketingBackend.DataAccessLayer
 
             try
             {
-                var Result = await _trainCollection.ReplaceOneAsync(x => x._id == request.scheduleDTO._id, request.scheduleDTO);
+                var Result = await _trainScheduleCollection.ReplaceOneAsync(x => x._id == request.scheduleDTO._id, request.scheduleDTO);
 
-                var res1 = await _trainCollection.Find(x => x._id == request.scheduleDTO._id).ToListAsync();
+                var res1 = await _trainScheduleCollection.Find(x => x._id == request.scheduleDTO._id).ToListAsync();
 
                 response.scheduleDTOs = res1;
                 response.IsSuccess = true;
@@ -131,7 +155,7 @@ namespace E_TicketingBackend.DataAccessLayer
             try
             {
                 response.scheduleDTOs = new List<ScheduleDTO>();
-                response.scheduleDTOs = await _trainCollection.Find(x => x._id == _id).ToListAsync();
+                response.scheduleDTOs = await _trainScheduleCollection.Find(x => x._id == _id).ToListAsync();
 
                 response.IsSuccess = true;
                 response.Message = "Successfull";
@@ -159,9 +183,9 @@ namespace E_TicketingBackend.DataAccessLayer
 
             try
             {
-                var Result = await _trainCollection.ReplaceOneAsync(x => x._id == request.scheduleDTO._id, request.scheduleDTO);
+                var Result = await _trainScheduleCollection.ReplaceOneAsync(x => x._id == request.scheduleDTO._id, request.scheduleDTO);
 
-                var res1 = await _trainCollection.Find(x => x._id == request.scheduleDTO._id).ToListAsync();
+                var res1 = await _trainScheduleCollection.Find(x => x._id == request.scheduleDTO._id).ToListAsync();
 
                 response.scheduleDTOs = res1;
                 response.IsSuccess = true;
@@ -178,5 +202,35 @@ namespace E_TicketingBackend.DataAccessLayer
             return response;
 
         }
+
+        public async Task<ResponseDTO> getSheduleByTrainId(string TrainCode)
+        {
+            ResponseDTO response = new ResponseDTO();
+
+            try
+            {
+                response.scheduleDTOs = new List<ScheduleDTO>();
+                response.scheduleDTOs = await _trainScheduleCollection.Find(x => x.train.TrainCode == TrainCode).ToListAsync();
+
+                response.IsSuccess = true;
+                response.Message = "Successfull";
+
+
+                if (response.scheduleDTOs == null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "No Record found";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return response;
+        }
+
+
     }
 }

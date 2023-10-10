@@ -37,11 +37,13 @@ namespace Eticketing
 
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowReactDev",
-                    builder => builder.WithOrigins("http://localhost:3000")
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
             });
 
             //----------------------------------------------------------------
@@ -123,7 +125,7 @@ namespace Eticketing
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors("AllowReactDev");
+            app.UseCors("AllowAllOrigins");
 
             app.UseEndpoints(endpoints =>
             {

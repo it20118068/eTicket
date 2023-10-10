@@ -210,3 +210,109 @@ D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 2\eTicket\E-TicketingBackend\E-T
 D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 2\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.pdb
 D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 2\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.genruntimeconfig.cache
 D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 2\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\ref\E-TicketingBackend.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\appsettings.Development.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\appsettings.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.exe
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.deps.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.runtimeconfig.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.pdb
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\AWSSDK.Core.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\DnsClient.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Bson.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Driver.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\SharpCompress.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Snappier.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\ZstdSharp.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.AssemblyReference.cache
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.GeneratedMSBuildEditorConfig.editorconfig
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.AssemblyInfoInputs.cache
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.AssemblyInfo.cs
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.CoreCompileInputs.cache
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.MvcApplicationPartsAssemblyInfo.cs
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.MvcApplicationPartsAssemblyInfo.cache
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.E-TicketingBackend.Microsoft.AspNetCore.StaticWebAssets.props
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.build.E-TicketingBackend.props
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.E-TicketingBackend.props
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.E-TicketingBackend.props
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.pack.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.build.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.development.json
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\scopedcss\bundle\E-TicketingBackend.styles.css
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.CopyComplete
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\refint\E-TicketingBackend.dll
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.pdb
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.genruntimeconfig.cache
+D:\SLIIT\4th Y.2 Semester\EAD\EAD FINAL Project 3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\ref\E-TicketingBackend.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\appsettings.Development.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\appsettings.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.exe
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.deps.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.runtimeconfig.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\E-TicketingBackend.pdb
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\AWSSDK.Core.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\DnsClient.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Bson.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Driver.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\SharpCompress.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Snappier.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\ZstdSharp.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.AssemblyReference.cache
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.GeneratedMSBuildEditorConfig.editorconfig
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.AssemblyInfoInputs.cache
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.AssemblyInfo.cs
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.CoreCompileInputs.cache
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.MvcApplicationPartsAssemblyInfo.cs
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.MvcApplicationPartsAssemblyInfo.cache
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.E-TicketingBackend.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.build.E-TicketingBackend.props
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.E-TicketingBackend.props
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.E-TicketingBackend.props
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.build.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\staticwebassets.development.json
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\scopedcss\bundle\E-TicketingBackend.styles.css
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.csproj.CopyComplete
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\refint\E-TicketingBackend.dll
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.pdb
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\E-TicketingBackend.genruntimeconfig.cache
+D:\Y4S2\EAD\Assignment\Backend V3\eTicket\E-TicketingBackend\E-TicketingBackend\obj\Debug\net6.0\ref\E-TicketingBackend.dll

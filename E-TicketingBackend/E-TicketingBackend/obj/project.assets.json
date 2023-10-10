@@ -5300,19 +5300,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tharu\\.nuget\\packages\\": {}
+    "C:\\Users\\Shashika Idushan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SLIIT\\4th Y.2 Semester\\EAD\\EAD FINAL Project 3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\E-TicketingBackend.csproj",
+      "projectUniqueName": "D:\\Y4S2\\EAD\\Assignment\\Backend V3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\E-TicketingBackend.csproj",
       "projectName": "E-TicketingBackend",
-      "projectPath": "D:\\SLIIT\\4th Y.2 Semester\\EAD\\EAD FINAL Project 3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\E-TicketingBackend.csproj",
-      "packagesPath": "C:\\Users\\tharu\\.nuget\\packages\\",
-      "outputPath": "D:\\SLIIT\\4th Y.2 Semester\\EAD\\EAD FINAL Project 3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\obj\\",
+      "projectPath": "D:\\Y4S2\\EAD\\Assignment\\Backend V3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\E-TicketingBackend.csproj",
+      "packagesPath": "C:\\Users\\Shashika Idushan\\.nuget\\packages\\",
+      "outputPath": "D:\\Y4S2\\EAD\\Assignment\\Backend V3\\eTicket\\E-TicketingBackend\\E-TicketingBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tharu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shashika Idushan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5320,7 +5320,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5375,7 +5374,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

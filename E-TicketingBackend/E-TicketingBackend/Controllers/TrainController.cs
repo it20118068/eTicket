@@ -34,6 +34,24 @@ namespace CrudOperations.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllTrain()
+        {
+            ResponseDTO response = new ResponseDTO();
+            try
+            {
+                response = await _trainDAL.GetAllTrain();
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Exception Occurs : " + ex.Message;
+            }
+
+            return Ok(response);
+
+        }
+
         [HttpPost]
         public async Task<IActionResult> addSchedule(RequestDTO request)
         {
@@ -120,6 +138,26 @@ namespace CrudOperations.Controllers
 
             return Ok(response);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> getSheduleByTrainId(RequestDTO request)
+        {
+            ResponseDTO response = new ResponseDTO();
+            try
+            {
+                response = await _trainDAL.getSheduleByTrainId(request.trainCode);
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return Ok(response);
+
+        }
+
+
 
     }
 }

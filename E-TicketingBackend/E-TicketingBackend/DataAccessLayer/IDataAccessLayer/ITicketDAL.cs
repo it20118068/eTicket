@@ -14,6 +14,8 @@ namespace E_TicketingBackend.DataAccessLayer.IDataAccessLayer
         public Task<ResponseDTO> getAllReservation();
         public Task<ResponseDTO> updateReservationById(RequestDTO request);
         public Task<ResponseDTO> getReservationById(string _id);
+        public Task<ResponseDTO> getReservationByNic(string nic);
+
 
 
     }
