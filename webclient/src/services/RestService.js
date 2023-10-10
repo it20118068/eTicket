@@ -1,103 +1,155 @@
 import axios from 'axios';
 
-const BACKEND_URL = "http://localhost:8885/YardManagmentBackend/";
+const BACKEND_URL = "http://localhost:7211/api/";
 
+
+/**
+ * Rest Service APIs
+ */
 class RestService {
 
 
     register(userDto) {
-        return axios.post(BACKEND_URL + 'register',userDto)
+        return axios.post(BACKEND_URL + 'Authentication/RegisterUser',userDto)
     }
 
     authenticateUser(username, password) {
-        return axios.post(BACKEND_URL + 'authenticate',{username:username, password:password})
+        return axios.post(BACKEND_URL + 'Authentication/UserLogin',{userName:username, password:password})
     }
 
 
-    getAllBrands(token, req){
+    addTrain(token, req){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'brand/getAllBrands',req, config)
+        return axios.post(BACKEND_URL + 'Train/addTrain',req, config)
     }
 
-    addBrand(token, req){
+
+    getSchedulesByTrainId(token, code){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'brand/addBrand',req, config)
+        return axios.post(BACKEND_URL + 'Train/getSheduleByTrainId?TrainCode',{trainCode:code}, config)
     }
 
-    updateBrandById(token, req){
+
+    getAllTrains(token, req){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'brand/updateBrandById',req, config)
+        return axios.get(BACKEND_URL + 'Train/getAllTrain', config)
     }
 
-    getAllItems(token, req){
+    addSchedule(token, req){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'item/getAllItems',req, config)
+        return axios.post(BACKEND_URL + 'Train/addSchedule',req, config)
     }
 
-    addItem(token, req){
+    getAllUsers(token, req){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'item/addItem',req, config)
+        return axios.get(BACKEND_URL + 'User/GetAllUsers', config)
     }
 
-    updateItemById(token, req){
+    deleteUserByNIC(token, id){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'item/updateItemById',req, config)
+        return axios.delete(BACKEND_URL + 'User/deletAccountById?nic='+ id, config)
     }
 
-    getAllSupplierOrders(token, req){
+    updateUserById(token, req){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'supplierOrder/getAllSupplierOrders',req, config)
+        return axios.post(BACKEND_URL + 'User/updateAccountById',req, config)
     }
 
-    addSupplierOrder(token, req){
+
+    getAllReservations(token){
         const config = {
             headers: {
                 'Access-Control-Allow-Origin': "*",
                 'Authorization': 'Bearer ' + token
             }
         }
-        return axios.post(BACKEND_URL + 'supplierOrder/addSupplierOrder',req, config)
+        return axios.get(BACKEND_URL + 'Ticket/getAllReservation', config)
     }
 
-    
+    getAllSchedules(token){
+        const config = {
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Authorization': 'Bearer ' + token
+            }
+        }
+        return axios.get(BACKEND_URL + 'Train/getAllSchedule', config)
+    }
 
+    addReservation(token, req){
+        const config = {
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Authorization': 'Bearer ' + token
+            }
+        }
+        return axios.post(BACKEND_URL + 'Ticket/addReservation',req, config)
+    }
 
+    updateReservationById(token, req){
+        const config = {
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Authorization': 'Bearer ' + token
+            }
+        }
+        return axios.post(BACKEND_URL + 'Ticket/updateReservationById',req, config)
+    }
 
+    updateScheduleById(token, req){
+        const config = {
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Authorization': 'Bearer ' + token
+            }
+        }
+        return axios.post(BACKEND_URL + 'Train/updateScheduleById',req, config)
+    }
+
+    updateTrainById(token, req){
+        const config = {
+            headers: {
+                'Access-Control-Allow-Origin': "*",
+                'Authorization': 'Bearer ' + token
+            }
+        }
+        return axios.post(BACKEND_URL + 'Train/updateTrainById',req, config)
+    }
 
 }
 
