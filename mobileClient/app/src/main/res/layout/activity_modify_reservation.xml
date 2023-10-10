@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ModifyReservationActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="MODIFY TICKET"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="#673AB7"
+                android:contentDescription="@string/emptyValue"
+                android:onClick="handleBack"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="#673AB7"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:text="From"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="To"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Train"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Depart At"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Arrival at"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Price per ticket"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Total"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView221"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/ticket_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView221"
+                app:layout_constraintStart_toStartOf="@+id/ticket_total" />
+
+            <TextView
+                android:id="@+id/ticket_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 6000"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
+                app:layout_constraintStart_toStartOf="@+id/ticket_pricePerTicket" />
+
+            <TextView
+                android:id="@+id/ticket_from"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="Colombo"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/ticket_to" />
+
+            <TextView
+                android:id="@+id/ticket_to"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="Kandy"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="@+id/ticket_train" />
+
+            <TextView
+                android:id="@+id/ticket_train"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="Udarata Manike"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/ticket_departAt" />
+
+            <TextView
+                android:id="@+id/ticket_departAt"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="08.00 AM"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="@+id/ticket_arrivalAt" />
+
+            <TextView
+                android:id="@+id/ticket_arrivalAt"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="01.00 PM"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/ticket_pricePerTicket" />
+
+            <TextView
+                android:id="@+id/ticket_pricePerTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="36dp"
+                android:text="Rs. 2000"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+            <EditText
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="Reservation Date"
+                android:inputType="date"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8FFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView221" />
+
+            <EditText
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="28dp"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="No Of Reservations"
+                android:inputType="number"
+                android:textColorHint="#8FFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="handleConfirm"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Confirm"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="handleBack"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Cancel"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
