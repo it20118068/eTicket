@@ -10,6 +10,7 @@ function TravelerManagementPage() {
     const [isLogged, setIsLogged] = useState(sessionStorage.getItem("isLogged"));
     const [token, setToken] = useState(sessionStorage.getItem("token"));
     const [userId, setUserId] = useState(sessionStorage.getItem("userId"));
+    const [role, setrole] = useState(sessionStorage.getItem("role"));
     const [relaod, setrelaod] = useState(false);
 
     const [username, setusername] = useState('');
@@ -66,7 +67,7 @@ function TravelerManagementPage() {
             email: email,
             isActive: true
         }
-        
+
         RestService.register(userDto).then((res) => {
 
             if (res.data.isSuccess == true) {
@@ -80,11 +81,11 @@ function TravelerManagementPage() {
                     progress: undefined,
                     theme: "colored",
                 });
-                
+
                 clearInputs();
                 setrelaod(true);
             }
-            
+
         }).catch(err => {
             console.log(err)
             toast.error('Something went wrong. Please try again!!', {
@@ -102,10 +103,10 @@ function TravelerManagementPage() {
     }
 
     // Handle delete traveler profile
-    function handleDeleteUser(){
+    function handleDeleteUser() {
         setrelaod(false);
-        RestService.deleteUserByNIC(token, selectedUser.nic).then(res=>{
-       
+        RestService.deleteUserByNIC(token, selectedUser.nic).then(res => {
+
             if (res.data.isSuccess == true) {
                 toast.success('Successfully deleted the user', {
                     position: "top-right",
@@ -136,10 +137,10 @@ function TravelerManagementPage() {
     }
 
     // Handle traveler status update
-    function handleActiveInactiveUser(user, status){
+    function handleActiveInactiveUser(user, status) {
         setrelaod(false);
         user.isActive = status;
-        RestService.updateUserById(token, {userDto:user}).then(res=>{
+        RestService.updateUserById(token, { userDto: user }).then(res => {
             if (res.data.isSuccess == true) {
                 toast.success('Successfully updated the user status', {
                     position: "top-right",
@@ -170,11 +171,11 @@ function TravelerManagementPage() {
     }
 
     // Handle search traveler by nic
-    function handleSearch(value){
+    function handleSearch(value) {
         let temp = [];
 
-        for(let i of travlersList){
-            if(i.nic.startsWith(value)){
+        for (let i of travlersList) {
+            if (i.nic.startsWith(value)) {
                 temp.push(i);
             }
         }
@@ -183,7 +184,7 @@ function TravelerManagementPage() {
     }
 
     // Handle update user profile
-    function handleUpdateProfile(){
+    function handleUpdateProfile() {
         setrelaod(false);
         if (email == '' || fname == '' || lname == '' || mobile == '') {
             toast.error('Inputs cannot be empty!!', {
@@ -204,9 +205,9 @@ function TravelerManagementPage() {
         selectedUser.lastName = lname;
         selectedUser.mobileNo = mobile;
         selectedUser.email = email;
-        
 
-        RestService.updateUserById(token, {userDto:selectedUser}).then(res=>{
+
+        RestService.updateUserById(token, { userDto: selectedUser }).then(res => {
             if (res.data.isSuccess == true) {
                 toast.success('Successfully updated the user profile', {
                     position: "top-right",
@@ -248,7 +249,7 @@ function TravelerManagementPage() {
         setrePassword('');
     }
 
-    function setTraveler(user){
+    function setTraveler(user) {
         setusername(user.userName);
         setemail(user.email);
         setfname(user.firstName);
@@ -267,7 +268,7 @@ function TravelerManagementPage() {
             <div className="p-4" style={{ height: '85%', width: '100%' }}>
                 <div className="row col-lg-12 p-3">
                     <div className="col-lg-6">
-                        <input type="text" onChange={(e)=>handleSearch(e.target.value)} className="form-control" placeholder="Search NIC" />
+                        <input type="text" onChange={(e) => handleSearch(e.target.value)} className="form-control" placeholder="Search NIC" />
                     </div>
                     <div className="col-lg-6" >
                         <button className="btn btn-light  " data-toggle="modal" data-target="#addTravelerModal" style={{ float: 'right' }}>Add Traveler</button>
@@ -298,10 +299,14 @@ function TravelerManagementPage() {
                                         <td>{t.userName}</td>
                                         <td>{t.isActive ? "ACTIVE" : "INACTIVE"}</td>
                                         <td>
-                                            <button class="btn btn-light " onClick={()=>setselectedUser(t)}  data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
-                                            <button class="btn btn-light ml-2" onClick={()=>setTraveler(t)}   data-toggle="modal" data-target="#updateTravelerModal"><i class="fa fa-edit "></i></button>
-                                            <button class={t.isActive ? "btn btn-light ml-2" : "display-none"} onClick={()=>handleActiveInactiveUser(t,false)} ><i class="fa fa-pause "></i></button>
-                                            <button class={t.isActive ? "display-none" : "btn btn-light ml-2"} onClick={()=>handleActiveInactiveUser(t,true)}><i class="fa fa-play "></i></button>
+                                            <button class="btn btn-light " onClick={() => setselectedUser(t)} data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                                            <button class="btn btn-light ml-2" onClick={() => setTraveler(t)} data-toggle="modal" data-target="#updateTravelerModal"><i class="fa fa-edit "></i></button>
+                                            {role != null && role == "1" &&
+                                                <>
+                                                    <button class={t.isActive ? "btn btn-light ml-2" : "display-none"} onClick={() => handleActiveInactiveUser(t, false)} ><i class="fa fa-pause "></i></button>
+                                                    <button class={t.isActive ? "display-none" : "btn btn-light ml-2"} onClick={() => handleActiveInactiveUser(t, true)}><i class="fa fa-play "></i></button>
+                                                </>
+                                            }
                                         </td>
                                     </tr>
                                 )
@@ -404,7 +409,7 @@ function TravelerManagementPage() {
                         </div>
                         <div class="modal-footer">
                             <button type="button" id="btnClose" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button"  class="btn btn-dark" onClick={handleDeleteUser}>Confirm</button>
+                            <button type="button" class="btn btn-dark" onClick={handleDeleteUser}>Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -440,7 +445,7 @@ function TravelerManagementPage() {
                                     <label htmlFor="">NIC</label>
                                 </div>
                                 <div className="col-lg-4">
-                                    <input type="text" readOnly value={nic} style={{backgroundColor:'#4a0061',color:'white'}} onChange={(e) => setnic(e.target.value)} className="form-control" />
+                                    <input type="text" readOnly value={nic} style={{ backgroundColor: '#4a0061', color: 'white' }} onChange={(e) => setnic(e.target.value)} className="form-control" />
                                 </div>
                                 <div className="col-lg-2">
                                     <label htmlFor="">Mobile</label>
@@ -454,7 +459,7 @@ function TravelerManagementPage() {
                                     <label htmlFor="">Username</label>
                                 </div>
                                 <div className="col-lg-4">
-                                    <input type="text" readOnly style={{backgroundColor:'#4a0061',color:'white'}} value={username} onChange={(e) => setusername(e.target.value)} className="form-control" />
+                                    <input type="text" readOnly style={{ backgroundColor: '#4a0061', color: 'white' }} value={username} onChange={(e) => setusername(e.target.value)} className="form-control" />
                                 </div>
                                 <div className="col-lg-2">
                                     <label htmlFor="">Email</label>
@@ -463,7 +468,7 @@ function TravelerManagementPage() {
                                     <input type="text" value={email} onChange={(e) => setemail(e.target.value)} className="form-control" />
                                 </div>
                             </div>
-                           
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" id="editBtnClose" data-dismiss="modal">Close</button>

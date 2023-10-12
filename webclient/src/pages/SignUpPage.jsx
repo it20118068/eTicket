@@ -39,7 +39,7 @@ function SignUpPage() {
             _id:"",
             userName:username,
             password:password,
-            role:"1",
+            role:"2",
             nic:nic,
             firstName:fname,
             lastName:lname,

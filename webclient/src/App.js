@@ -17,9 +17,10 @@ function App() {
   const [token, setToken] = useState(sessionStorage.getItem("token"));
   const [username, setUserName] = useState(sessionStorage.getItem("username"));
   const [userId, setUserId] = useState(sessionStorage.getItem("userId"));
+  const [role, setrole] = useState(sessionStorage.getItem("role"));
 
   return (
-    <div style={{ height: '100vh', overflow:'hidden' }}>
+    <div style={{ height: '100vh', overflow: 'hidden' }}>
       {isLogged == "true" ?
         <>
           <div className='row' style={{ height: '100%', margin: '0%' }}>
@@ -29,7 +30,9 @@ function App() {
                 <Routes>
                   <Route exact path='*' element={<TravelerManagementPage />} />
                   <Route exact path='/travelerManagement' element={<TravelerManagementPage />} />
-                  <Route exact path='/trainManagement' element={<TrainManagementPage />} />
+                  {role != null && role == "1" &&
+                    <Route exact path='/trainManagement' element={<TrainManagementPage />} />
+                  }
                   <Route exact path='/ticketManagement' element={<TicketBookingManagementPage />} />
                 </Routes>
               </div>
@@ -37,17 +40,17 @@ function App() {
           </div>
         </> :
         <>
-        <div className='row' style={{ height: '100%', margin: '0%' }}>
-          <Router >
-            <Routes>
-              <Route exact path='*' element={<LoginPage />} />
-              <Route exact path='/login' element={<LoginPage />} />
-              <Route exact path='/register' element={<SignUpPage />} />
-            </Routes>
-          </Router>
+          <div className='row' style={{ height: '100%', margin: '0%' }}>
+            <Router >
+              <Routes>
+                <Route exact path='*' element={<LoginPage />} />
+                <Route exact path='/login' element={<LoginPage />} />
+                <Route exact path='/register' element={<SignUpPage />} />
+              </Routes>
+            </Router>
           </div>
         </>
-        
+
       }
 
       <ToastContainer />
